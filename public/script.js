@@ -24,7 +24,7 @@ locationBtn.addEventListener("click", () => {
 });
 
 function onSuccess(position) {
-    const apikey = "d4d88789deba6723cd93ace978fb2b0e";
+    const apikey = process.env.WEATHER_API_KEY; // Vercel will inject this at runtime
     const { latitude, longitude } = position.coords;
     api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apikey}`;
     console.log("Generated API URL:", api); // Debugging
@@ -39,7 +39,7 @@ function onError(error) {
 
 
 function requestApi(city){
-    const apikey = "d4d88789deba6723cd93ace978fb2b0e";
+    const apikey = process.env.WEATHER_API_KEY;
     api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apikey}`;
     fetchData();
 }

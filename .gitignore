@@ -1,24 +1,2 @@
-# Logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Dependency directories
-node_modules/
-dist/
-.vercel/
-.netlify/
-
-# Environment files
 .env
-.env.local
-.env.*.local
-
-# IDE-specific files
-.vscode/
-.idea/
-.DS_Store
-
-# Build output
-/build
+node_modules/
